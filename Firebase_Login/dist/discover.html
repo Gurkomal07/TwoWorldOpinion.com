@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Discover</title>
+
+		<link rel="stylesheet" type="text/css" href="css/stylesdiscover.css">
+		<link rel="stylesheet" href="css/modern-reset.css">
+
+
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Sono:wght@400&display=swap" rel="stylesheet">
+
+
+
+		<script src="https://kit.fontawesome.com/540cbce586.js" crossorigin="anonymous"></script>
+
+
+	</head>
+	<body class="d-body" data-new-gr-c-s-check-loaded="14.1097.0" data-gr-ext-installed="">
+		<main class="d-main">
+
+			<script type="module">
+
+				import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+
+				const firebaseConfig = {
+  apiKey: "AIzaSyDs8lcJfdBO2xahG9qRHfQxbZlM_WdEZvw",
+  authDomain: "world2opinion.firebaseapp.com",
+  databaseURL: "https://world2opinion-default-rtdb.firebaseio.com",
+  projectId: "world2opinion",
+  storageBucket: "world2opinion.appspot.com",
+  messagingSenderId: "872516887044",
+  appId: "1:872516887044:web:d2e3e426362b0d47dc8b51",
+  measurementId: "G-0KNC73MJ16"
+};
+
+				const app = initializeApp(firebaseConfig);
+
+
+				import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL, } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"
+
+				import { doc, getDoc, setDoc, getFirestore, addDoc, collection, getDocs, updateDoc, where, query, FieldValue, increment, FieldPath, deleteDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+				import { onAuthStateChanged, getAuth } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+
+				import { get, child, ref } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+
+				const clouddb = getFirestore();
+				const auth = getAuth();
+
+				// fetch image
+				const getProfilePicUrl = async (postId) => {
+					try {
+						// Get the profile pic url
+						const querySnapshot1 = await getDocs(
+							query(collection(clouddb, "Posts")));
+
+						const docRef = doc(clouddb, "Posts", postId);
+						const docSnap = await getDoc(docRef);
+
+						const userId = docSnap.data().UserId;
+						if (userId == null) {
+							return null;
+						}
+						// console.log(userId);
+
+
+
+						// make userSnapshot with condition that documentid of Users collection is equal to userId
+
+						const userSnapshot = await getDocs(
+							query(collection(clouddb, "Users")));
+
+						const docRef2 = doc(clouddb, "Users", userId);
+						const docSnap2 = await getDoc(docRef2);
+
+						const pic = docSnap2.data().ProfilePic;
+						// console.log(pic);
+
+						// Return the profile pic url
+						return pic;
+					}
+					catch (error) {
+						console.error('Error getting profile pic url:', error);
+						return null;
+					}
+				};
+
+				async function handleProfileClick() {
+					const userProfile = document.querySelectorAll(".onClick");
+					let moveTouser;
+					userProfile.forEach(button => {
+						button.addEventListener('click', async (e) => {
+							console.log(e.target);
+							
+							const postData = query(collection(clouddb, "Users"), where("ProfilePic", "==", e.target.src))
+							console.log(postData)
+							const p = getDocs(postData)
+							console.log(p)
+							p.then((data) => {
+								const response = data.docs.map(d => ({ id: d.id, ...d.data() }))
+								console.log(response)
+								response.map(results => {
+									console.log("results")
+									console.log(results)
+									moveTouser = results.id
+									console.log("MOVETOUSER")
+									console.log(moveTouser)
+									window.location.href = "../dist/redirectToProfile.html?moveTouser=" + encodeURIComponent(moveTouser)
+								})
+							})
+						})
+					})
+				}
+
+
+				const userRef=collection(clouddb, "Users")
+				let signInEmail;
+				let UserId;
+				let UserName;
+				onAuthStateChanged(auth, function (user) {
+					if (user) {
+						signInEmail = auth.currentUser.email
+
+					} else {
+						console.log('No user is signed in.')
+					}
+					
+					const getCurrentUser = query(userRef, where("Email", "==", signInEmail))
+					const getCurrentUserData = getDocs(getCurrentUser)
+					getCurrentUserData.then((data) => {
+						const response =
+							data.docs.map(d => ({ id: d.id, ...d.data() }))
+						response.map(results => {
+							//console.log(results)
+							UserId = results.id
+							UserName = results.UserName
+						})
+						console.log(UserName,"(",UserId,")","is logged in")
+						const UserRef = collection(clouddb, "Users");
+						const userCollection = doc(UserRef, UserId);
+						const subCollection = collection(userCollection, "HidePosts");
+						// Handling delete button
+						async function handleDeleteButton() {
+							const deletePost = document.querySelectorAll('.post-button-delete');
+							deletePost.forEach(post => {
+								post.addEventListener('click', (e) => {
+
+									post.style.transform = "scale(4)";
+									post.style.transition = "transform .50s ease";
+									//wait for 50ms
+									setTimeout(() => {
+										post.style.transform = "scale(1)";
+									}, 50);
+
+									// change i element to new icon after remving the old one
+									post.innerHTML = `<i class="fa-solid fa-ban"></i>`;
+									// change color of button to red
+									post.style.color = "red";
+
+
+									e.preventDefault();
+									console.log(e);
+									const Pid = event.currentTarget.getAttribute('value');
+									console.log("POSTID!!!!!!!!!!!!!");
+									console.log(Pid)
+									const docRef = doc(clouddb, 'Posts', Pid);
+									const hidePostsInfo = doc(subCollection, Pid);
+									//deleteDoc(docRef);
+									setDoc(hidePostsInfo,  {
+										PostId: Pid,
+										hidden: true,
+									})
+								})
+							})
+						}
+						
+						//Handling share button
+						async function handleShareButtonClick() {
+						const Button = document.querySelectorAll('.post-button-share');
+						Button.forEach(button => {
+							button.addEventListener('click', () => {
+
+								button.style.transform = "scale(2)";
+								button.style.transition = "transform .50s ease";
+								//wait for 50ms
+								setTimeout(() => {
+									button.style.transform = "scale(1)";
+								}, 50);
+
+								const ImageUrl = event.currentTarget.getAttribute('value');
+								console.log(ImageUrl);
+								navigator.share({
+									title: 'Image Title',
+									text: 'Check out this image!',
+									url: ImageUrl
+								})
+								.then(() => window.alert('Post shared successfully'))
+								.catch((error) => console.log('Error sharing post:', error));
+							});
+						})
+
+					}
+
+
+
+
+// Handling Like Button
+		async function handleLikeButtonClick() {
+  var buttons = document.querySelectorAll('.post-button-like');
+  const clickedButtons = {};
+  buttons.forEach(button => {
+    button.addEventListener('click', async (event) => {
+      // postId is equal to id of this button
+      const postId = event.currentTarget.getAttribute('value');
+      console.log("like", postId);
+
+      // Get the post document reference
+      const docRef = doc(clouddb, "Posts", postId);
+      const docSnap = await getDoc(docRef);
+      if (!docSnap.exists()) {
+        throw new Error(`Post with ID ${postId} does not exist`);
+      }
+
+
+// Check if the post has a 'likedBy' map
+let likedBy = docSnap.data().likedBy;
+if (!likedBy) {
+  likedBy = {};
+}
+
+let disLikedBy = docSnap.data().disLikedBy;
+if (!disLikedBy) {
+  disLikedBy = {};
+}
+
+
+
+      const updateData = {};
+
+
+	  if (disLikedBy[UserId]) {
+  // Remove the user's name from the disLikedBy map
+  delete disLikedBy[UserId];
+  updateData.disLikedBy = disLikedBy;
+}
+
+
+
+		var hasLiked;
+		hasLiked = likedBy[UserId] || false;
+		console.log("hasLiked", !hasLiked);
+
+
+if (!hasLiked) {
+  // Add a new map entry for the user
+  likedBy[UserId] = true;
+  updateData.likedBy = likedBy;
+} else {
+  // Toggle the value of the user's map entry
+  likedBy[UserId] = !likedBy[UserId];
+  updateData[`likedBy.${UserId}`] = likedBy[UserId];
+}		
+await updateDoc(docRef, updateData);
+
+const likeCount = docSnap.data().like_count;
+// count the number of true values in the likedBy map
+const newLikeCount = Object.values(likedBy).filter(Boolean).length;
+// update the like_count field
+await updateDoc(docRef, { like_count: newLikeCount });
+console.log("newLikeCount", newLikeCount);
+
+
+	// Animation effect
+    // get dislike button
+      var dislikeButton = document.querySelector(`.post-button-dislike[value="${postId}"]`);
+      if (hasLiked === false) {
+        button.style.transform = "rotate(360deg) scale(5)";
+        button.style.transition = "transform .50s ease";
+        button.style.color = "orange";
+
+        await new Promise(r => setTimeout(r, 50));
+        dislikeButton.style.color = "#05032d";
+        dislikeButton.style.transform = "rotate(0deg) scale(1)";
+
+        button.style.transform = "rotate(360deg) scale(1.6)";     
+      } else {
+        button.style.transform = "rotate(360deg) scale(1)";
+        button.style.transition = "transform .50s ease";
+        button.style.color = "#05032d";
+
+        await new Promise(r => setTimeout(r, 50));
+        dislikeButton.style.color = "#05032d";
+        button.style.transform = "rotate(0deg) scale(1)";
+      }
+
+    });
+  });
+}
+
+   
+
+//Handling Dislike button
+async function handleDislikeButtonClick() {
+  var button = document.querySelectorAll('.post-button-dislike');
+  const clickedButtons = {};
+  button.forEach(button => {
+    button.addEventListener('click', async (event) => {
+      // postId is equal to id of this button
+      const postId = event.currentTarget.getAttribute('value');
+      console.log("disLike", postId);
+
+      // Get the post document reference
+      const docRef = doc(clouddb, "Posts", postId);
+      const docSnap = await getDoc(docRef);
+      if (!docSnap.exists()) {
+        throw new Error(`Post with ID ${postId} does not exist`);
+      }
+
+
+
+// Check if the post has a 'disLikedBy' map
+let disLikedBy = docSnap.data().disLikedBy;
+if (!disLikedBy) {
+  disLikedBy = {};
+}
+
+
+
+
+let likedBy = docSnap.data().likedBy;
+if (!likedBy) {
+  likedBy = {};
+}
+
+
+
+      const updateDatas = {};
+
+
+	  if (likedBy[UserId]) {
+  // Remove the user's name from the disLikedBy map
+  delete likedBy[UserId];
+  updateDatas.likedBy = likedBy;
+}
+
+
+
+
+
+		var hasDisLiked;
+		hasDisLiked = disLikedBy[UserId] || false;
+		console.log("hasDisLiked", !hasDisLiked);
+
+
+if (!hasDisLiked) {
+  // Add a new map entry for the user
+  disLikedBy[UserId] = true;
+  updateDatas.disLikedBy = disLikedBy;
+} else {
+  // Toggle the value of the user's map entry
+  disLikedBy[UserId] = !disLikedBy[UserId];
+  updateDatas[`disLikedBy.${UserId}`] = disLikedBy[UserId];
+}		
+await updateDoc(docRef, updateDatas);
+
+
+const dislikeCount = docSnap.data().dislike_count;
+// count the number of true values in the likedBy map
+const newdisLikeCount = Object.values(disLikedBy).filter(Boolean).length;
+// update the like_count field
+await updateDoc(docRef, { dislike_count: newdisLikeCount });
+console.log("newdisLikeCount", newdisLikeCount);
+
+
+
+
+
+		  //   // Animation effect
+		  var likeButton = document.querySelector(`.post-button-like[value="${postId}"]`);
+     
+	 if (hasDisLiked === false) {
+			 button.style.transform = "rotate(360deg) scale(5)";
+			 button.style.transition = "transform .50s ease";
+			 button.style.color = "orange";
+ 
+			 await new Promise(r => setTimeout(r, 50));
+			  likeButton.style.color = "#05032d";
+			  likeButton.style.transform = "rotate(0deg) scale(1)";
+ 
+ 
+			 // make it clockwise
+			 button.style.transform = "rotate(360deg) scale(1.6)";     
+		 }
+		 else {
+			 button.style.transform = "rotate(360deg) scale(1)";
+			 button.style.transition = "transform .50s ease";
+			 button.style.color = "#05032d";
+ 
+			 await new Promise(r => setTimeout(r, 50));
+ 
+			 // make dislike button back to normal
+			 likeButton.style.color = "#05032d";
+ 
+		 button.style.transform = "rotate(0deg) scale(1)";
+		 }
+ 
+
+    });
+  });
+}
+
+
+
+
+
+						let userNaams;
+						const getUserNames = async (PostId) => {
+												try {
+													const docRef = doc(clouddb, "Posts", PostId);
+													const docSnap = await getDoc(docRef);
+													const userPostedId = docSnap.data().UserId;
+													// console.log(userPostedId);
+
+
+													const snap = await doc(clouddb, "Users", userPostedId);
+													const docSnap1 = await getDoc(snap);
+													 userNaams = docSnap1.data().UserName;
+													// console.log(userNaams);
+
+													return userNaams;
+												} catch (error) {
+													console.log(error);
+												}
+
+										}
+
+
+
+
+						 async function GetImagesFromFirestore() {
+								return new Promise(async function (resolve, reject) {
+									try {
+										var imageUrls = [];
+
+										var postIDs = [];
+										var userName;
+										var Dates = [];
+										let UserIds = [];
+										const hidePostsQuery = query(subCollection, where('hidden', '==', true));
+										const hidePosts = await getDocs(hidePostsQuery);
+										const hiddenPostIds = hidePosts.docs.map(doc => doc.id);
+										const postIdsQuery = query(collection(clouddb, 'Posts'));
+										const postIds = await getDocs(postIdsQuery);
+										const visiblePostIds = postIds.docs.map(doc => doc.id).filter(id => !hiddenPostIds.includes(id));
+										// const visiblePostsQuery = await query(collection(clouddb, 'Posts'), where('__name__', 'array-contains', visiblePostIds));
+										// const visiblePosts = await getDocs(visiblePostsQuery);
+										const visiblePosts = await Promise.all(visiblePostIds.map(id => getDoc(doc(collection(clouddb, 'Posts'), id))));
+										visiblePosts.forEach(async (doc) => {
+											if(doc.exists()) {
+												UserIds.push(doc.data().UserId);
+												imageUrls.push(doc.data().ImageUrl);
+												postIDs.push(doc.id);
+												Dates.push(doc.data().Date);
+												// userName = await getUserNames(doc.id);
+												// console.log(userName);
+											}
+										});
+
+								
+										
+
+
+											
+										const profilePicUrls = await Promise.all(postIDs.map(getProfilePicUrl));
+										// const naam = await Promise.all(userNaams.map(getUserNames));
+										// console.log(naam);
+
+
+										var imageList = document.querySelector(".d-show-posts")
+
+										imageList.innerHTML =
+											`<div class="d-display-on-post">` +
+											//  imageUrls.map((imageUrl) => {
+											// 	const index = imageUrls.indexOf(imageUrl);
+											// 	const postID = postIDs[index];
+											// 	userName =  getUserNames(postID);
+											// 	console.log(userName);
+
+
+												(await Promise.all(
+													imageUrls.map(async (imageUrl) => {
+													const index = imageUrls.indexOf(imageUrl);
+													const postID = postIDs[index];
+													const userName = await getUserNames(postID);
+													// console.log(userName);
+
+																							
+												// const dates = Dates[index];
+
+											// date today dd/mm/yyyy
+											var today = new Date();
+											var dd = String(today.getDate()).padStart(2, '0');
+											var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+											var yyyy = today.getFullYear();
+
+											today = dd + '/' + mm + '/' + yyyy;
+											const DateToday = today;
+
+
+												let profilePicUrl = profilePicUrls[index];
+												return `
+													<div class="d-userPosted">
+														<ul>
+															<li>
+															<button>
+																
+																	<img src="${profilePicUrl}"  class="onClick"></a>
+															</button>
+															</li>
+															<li>
+															<button>
+																<p value="${userName}">${userName}</p>
+															</button>
+															</li>
+															<li>
+															<button>
+																<p value="${DateToday}">${DateToday}</p>
+															</button>
+															</li>
+														</ul>
+													</div>								
+													<ul class="d-li-img" data-postid="$">
+													<li><img src="${imageUrl}"></li>
+													</ul>
+													<div class="d-reaction-icons">
+													<ul class="d-reaction-list">
+														<li class="d-svg-like"><button class="post-button-like"  value="${postID}"><i class="fa-solid fa-thumbs-up"></i></button></li>
+														<li class="d-svg-share"><button class="post-button-share" value="${imageUrl}"><i class="fa-solid fa-share"></i></button></li>
+														<li class="d-svg-trash"><button class="post-button-delete" value="${postID}"><i class="fa-solid fa-trash"></i></button></li>
+														<li class="d-svg-dislike"><button class="post-button-dislike" value="${postID}"><i class="fa-solid fa-thumbs-down"></i></button></li>
+													</ul>
+													</div>
+												`
+											}))).join('') +
+											`</div>`;
+										resolve(imageUrls);
+											
+									} catch (error) {
+										reject(error);
+									}
+								});
+							}
+						
+						GetImagesFromFirestore()
+							.then(() => {
+								handleLikeButtonClick();
+								handleDislikeButtonClick();
+								//handleLikeDislikeButtonClick()
+								handleShareButtonClick();
+								handleProfileClick();
+								handleDeleteButton();
+							}).catch((error) => {
+								console.error('Error in updating document: ', error);
+						});
+					})
+							
+				})	
+
+
+
+
+// -----------------------------
+
+const searchInput = document.querySelector('#search-input');
+				const searchBtn = document.querySelector('#search-btn');
+				const searchResults = document.querySelector('#search-results');
+
+				async function handleSearch() {
+	searchResults.innerHTML = '';
+
+	const query = searchInput.value.trim().toLowerCase();
+
+	const usersRef = await getDocs(
+				(collection(clouddb, "Users")));
+	const users = usersRef.docs.map(doc => doc.data());
+
+	// get usernames from users collection
+	const usernames = users.map(users => users.UserName);
+
+	// filter usernames that match query
+	const querySnapshots = await getDocs(
+		collection(clouddb, "Users"), 
+		where("UserName", ">=", query), 
+		where("UserName", "<=", query + "\uf8ff")
+	);
+
+	const querySnapshotsresult = querySnapshots.docs.map(doc => doc.data().UserName);
+
+	const filteredUsernames = querySnapshotsresult.filter(username => username.includes(query));
+
+	// for each query snapshot, filter out the ones that match query
+	filteredUsernames.forEach((doc) => {
+		const li = document.createElement('li');
+		li.textContent = doc;
+		li.setAttribute('data-user-id', doc.id);
+		li.addEventListener('click', handleProfileClicks);
+		searchResults.appendChild(li);
+	});
+
+	if (filteredUsernames.length == 0 && query.length > 0) {
+		// make a just one li for no results found
+		const li = document.createElement('li');
+		li.textContent = 'No results...';
+		li.style.color = 'red';
+		searchResults.appendChild(li);
+		 
+		if (searchResults.firstChild.textContent == 'No results...')
+		{
+			//  select all other li elements except the first li and remove them
+			for (let i = 1; i < searchResults.children.length; i++) {
+				searchResults.children[i].remove();
+			}
+
+			const li = document.querySelectorAll('#search-results li');
+
+			
+			return;
+		}
+		
+	} 
+
+
+	document.addEventListener('click', (event) => {
+  const isClickInsideList = searchResults.contains(event.target);
+  if (!isClickInsideList) {
+    searchResults.style.display = 'none';
+  }
+});
+}
+
+
+				async function handleProfileClicks(event) {
+				const userId = event.target.getAttribute('data-user-id');
+
+				window.location.href = `../dist/redirectToProfile.html?moveTouser=${encodeURIComponent(userId)}`;
+				}
+
+				searchBtn.addEventListener('click', handleSearch);
+
+				searchInput.addEventListener('keyup', handleSearch);
+
+
+
+
+
+			</script>
+
+			<header class="d-header">
+					<a href="#">
+						<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.69 67.69">
+							<defs>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <style>
+									.cls-1 {
+										stroke-width: 3px;
+									}
+
+									.cls-1,
+									.cls-2 {
+										fill: none;
+										stroke: #fff;
+										stroke-miterlimit: 10;
+									}
+
+									.cls-3 {
+										fill: #f7961d;
+									}
+
+									.cls-4 {
+										fill: #fdce8d;
+									}
+
+									.cls-5 {
+										fill: #fff;
+									}
+
+									.cls-6 {
+										fill: #1a3253;
+									}
+
+									.cls-2 {
+										stroke-linecap: round;
+									}
+								</style>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </defs>
+							<g id="Layer_1-2">
+								<g id="Group_43">
+									<path id="Path_40" class="cls-6"
+										d="m55.35,67.69H12.34c-6.81-.02-12.32-5.53-12.34-12.34V12.34C.02,5.53,5.53.02,12.34,0h43c6.81.02,12.32,5.53,12.34,12.34v43c-.02,6.81-5.53,12.32-12.34,12.34">
+									</path>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+									<path id="Path_41" class="cls-3"
+										d="m51.05,28.99c0,9.5-7.7,17.21-17.21,17.21s-17.21-7.7-17.21-17.21,7.7-17.21,17.21-17.21h0c9.5,0,17.21,7.7,17.21,17.21h0">
+									</path>
+									<path id="Path_42" class="cls-1"
+										d="m51.05,28.99c0,9.5-7.7,17.21-17.21,17.21s-17.21-7.7-17.21-17.21,7.7-17.21,17.21-17.21h0c9.5,0,17.21,7.7,17.21,17.21Z">
+									</path>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+									<path id="Path_43" class="cls-4"
+										d="m44.51,33.34c0,5.89-4.77,10.67-10.66,10.67s-10.67-4.77-10.67-10.66c0-5.89,4.77-10.67,10.66-10.67h0c5.89,0,10.66,4.77,10.66,10.66h0">
+									</path>
+									<line id="Line_1" class="cls-2" x1="26.56" y1="39.33" x2="41.13" y2="39.33"></line>
+									<line id="Line_2" class="cls-2" x1="33.77" y1="40.06" x2="33.92" y2="50.61"></line>&nbsp;
+									&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<path
+										id="Path_44" class="cls-2"
+										d="m27.98,32.58l2.22,8.05c.08.34.41.54.75.47.23-.05.4-.23.46-.45l1.82-6.06c.09-.33.43-.53.76-.45.22.06.39.23.45.45l1.82,6.07c.09.33.43.53.76.45.23-.06.4-.24.45-.46l2.24-8.06">
+									</path>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+									<path id="Path_45" class="cls-5"
+										d="m37.77,49.91h-7.85c-.7.02-1.26.6-1.24,1.31.02.68.56,1.22,1.24,1.24h7.85c.7-.02,1.26-.6,1.24-1.31-.02-.68-.56-1.22-1.24-1.24">
+									</path>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+									<path id="Path_46" class="cls-5"
+										d="m36.3,53.82h-4.92c-.68,0-1.24.56-1.24,1.24,0,.68.55,1.24,1.24,1.24h4.92c.68,0,1.24-.55,1.24-1.24,0-.68-.55-1.24-1.24-1.24h0">
+									</path>
+								</g>
+							</g>
+						</svg>
+					</a>
+
+			<div class="d-search">
+				<input type="text" id="search-input" placeholder="Search">
+				<button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+				<ul id="search-results"></ul>
+			</div>
+
+			<script>
+		</script>
+  
+
+
+			</header>
+
+			<div class="d-show-posts"></div>
+
+			<div class="d-post1"></div>
+			<div class="d-post2"></div>
+
+		</main>
+
+		<!-- navigation bar to the other pages at the bottom -->
+		<footer class="d-footer">
+			<nav class="d-page-menu">
+				<ul class="d-page-list">
+					<li class="d-page-item">
+						<a href="create.html" class="d-page-link">
+							<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.46 44.2">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: none;
+											stroke: #fff;
+											stroke-linecap: round;
+										}
+
+										.cls-1,
+										.cls-2 {
+											stroke-miterlimit: 10;
+											stroke-width: 3px;
+										}
+
+										.cls-3 {
+											fill: #fdce8d;
+										}
+
+										.cls-4 {
+											fill: #194789;
+										}
+
+										.cls-2 {
+											fill: #f7961d;
+											stroke: #194789;
+										}
+									</style>
+								</defs>
+								<g id="Layer_1-2">
+									<g>
+										<circle class="cls-2" cx="18.23" cy="18.23" r="16.73"></circle>
+										<circle class="cls-3" cx="18.23" cy="18.23" r="10.37"></circle>
+										<line class="cls-1" x1="13.31" y1="18.23" x2="23.15" y2="18.23"></line>
+										<line class="cls-1" x1="18.16" y1="13.1" x2="18.3" y2="23.36"></line>
+										<rect class="cls-4" x="13.18" y="37.99" width="10.1" height="2.47" rx="1.24"
+											ry="1.24"></rect>
+										<rect class="cls-4" x="14.63" y="41.79" width="7.19" height="2.41" rx="1.2"
+											ry="1.2"></rect>
+									</g>
+								</g>
+							</svg></a>
+					</li>
+
+					<li class="d-page-item">
+						<a href="discover.html" class="d-page-link">
+							<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.67 28.64">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #f7961d;
+										}
+
+										.cls-2 {
+											fill: #fff;
+										}
+
+										.cls-3 {
+											fill: #ffe5c5;
+										}
+
+										.cls-4 {
+											fill: #194789;
+										}
+									</style>
+								</defs>
+								<g id="Layer_1-2">
+									<g>
+										<ellipse class="cls-4" cx="14.84" cy="14.32" rx="14.84" ry="14.32"></ellipse>
+										<ellipse class="cls-2" cx="14.84" cy="14.32" rx="12.43" ry="12"></ellipse>
+										<ellipse class="cls-1" cx="14.84" cy="14.32" rx="10.32" ry="9.96"></ellipse>
+										<circle class="cls-3" cx="19.65" cy="10.88" r="2.68"></circle>
+									</g>
+								</g>
+							</svg>
+						</a>
+					</li>
+
+					<li class="d-page-item">
+						<a href="profile.html" class="d-page-link">
+							<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.29 37.56">
+								<defs>
+									<style>
+										.cls-1 {
+											fill: #f7961d;
+										}
+
+										.cls-2 {
+											fill: #194789;
+										}
+									</style>
+								</defs>
+								<g id="Layer_1-2">
+									<g>
+										<path class="cls-2"
+											d="m31.51,11.98L20.64,1.6c-2.23-2.13-5.75-2.13-7.99,0L1.79,11.98c-1.14,1.09-1.79,2.6-1.79,4.18v15.62c0,3.19,2.59,5.78,5.78,5.78h21.73c3.19,0,5.78-2.59,5.78-5.78v-15.62c0-1.58-.65-3.09-1.79-4.18Zm-14.75,20.06c-2.24,0-4.26-.88-5.76-2.31.02.05.03.11.05.16-1.18-1.11-2.03-2.56-2.39-4.19-.16-.65-.26-1.32-.26-2.02,0-4.62,3.74-8.36,8.36-8.36s8.36,3.74,8.36,8.36-3.74,8.36-8.36,8.36Z">
+										</path>
+										<circle class="cls-1" cx="16.65" cy="24.03" r="4.07"></circle>
+										<rect class="cls-1" x="8.98" y="29.32" width="15.34" height="8.21" rx="3.94"
+											ry="3.94"></rect>
+									</g>
+								</g>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+
+		<script src="discover.bundle.js"></script>
+		<script src="commons.bundle.js"></script>
+
+
+		<!-- <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script> -->
+
+
+		<script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+
+		<script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
+		<script type="module" src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js"></script>
+
+	</body>
+
+</html>

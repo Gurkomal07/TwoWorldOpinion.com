@@ -1,0 +1,425 @@
+/* .p-header{
+    padding-top: 2rem;
+    
+}
+
+.p-friend-img{
+    width:100%;
+    height: 100%
+}
+.p-profile-photo{
+    display: flex;
+    flex-flow: row;
+
+}
+
+.p-username{
+    padding-left: 1rem;
+    margin:auto 0;
+    height: inherit;
+}
+
+
+.p-profile-display
+{
+    border-radius: 5rem;
+    width: 7rem;
+    height: 7rem;
+}
+
+.p-profile-container{
+    position: relative;
+}
+
+
+
+.p-add-profile{
+
+    width: 1rem;
+    height: 1rem;
+
+    background-color: aliceblue;
+    position: absolute;
+    right: 1rem;
+}
+
+
+/*Friends list styling*/
+/* 
+
+.p-friends-list{
+    display: flex;
+    flex-flow: row;
+    overflow-x: auto;
+}
+
+.p-friends-list div{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0.5rem;
+}
+
+.p-friend-img{
+    height:4rem;
+    width: 4rem;
+    border-radius: 2rem;
+}
+
+.p-friends-list{
+    overflow-x: auto;
+    width: calc(100% - 3rem);
+
+}
+
+.right
+{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 1rem;
+    margin:2rem 0;
+} */
+/* 
+
+.p-friends-list{
+    display: flex;
+    flex-flow: row;
+}
+
+.p-friends-list div{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0.5rem;
+}
+
+.p-friend-img{
+    height:4rem;
+    width: 4rem;
+    border-radius: 2rem;
+}
+
+.p-friends-list{
+    overflow-x: auto;
+    width: calc(100% - 3rem);
+}
+
+.right
+{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 1rem;
+    margin:2rem 0;
+} */
+
+
+/*Styling posts*/
+
+/* .p-post-container{
+    display: flex;
+    flex-flow: row wrap; 
+    width: inherit;
+    margin-bottom: 5rem;
+}
+
+.p-post-template{
+   width: calc(100%/3 - 0.6rem); 
+   padding: 0.2rem;
+}
+
+.p-post-template img{
+    width: 100%;
+    height: 10rem;
+}  */
+
+
+
+
+
+
+/*footer*/
+/* 
+footer{
+    height: 5rem;
+    background-color: white;
+
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    margin: 0;
+}
+
+.menu__list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu__list li{
+    width: calc(100%/3);
+ 
+}
+
+footer img{
+    width: 2rem;
+    height: 2rem;
+} */
+
+*{
+    box-sizing: unset;  
+  }
+  
+  .p-body
+  {
+      max-width: 30rem;
+      margin: auto;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #194789;
+      
+  }
+  
+  .p-h2 {
+      padding-left: .5rem;
+  }
+  
+  .p-header{
+      padding: 1rem;
+  
+      padding-top: 2rem;
+      /* font-weight: bold; */
+      font-family: Helvetica;
+      color: white;
+      background-color: #194789;
+      
+      
+      
+      border-top: none;
+      
+  }
+  
+  .p-profile-photo{
+      display: flex;
+      flex-flow: row;
+      
+  
+  }
+  
+  .p-fullname{
+      margin:auto 0;
+      height: inherit;
+      color: white;
+      font-size: 1.5rem;
+  }
+  
+  
+  .p-profile-display
+  {
+      
+      width: 5rem;
+      height: 5rem;
+      border-color: #120b01;
+      border-style: solid;
+      border-width: 0.2rem;
+      border-radius: 5rem;
+      margin-right: 1rem;
+  }
+  
+  .p-profile-container{
+      position: relative;
+  }
+  
+  
+  
+  .p-add-profile{
+  
+      width: 1rem;
+      height: 1rem;
+      background-color: aliceblue;
+      position: absolute;
+      right: 0.2rem;
+      top: 0.3rem;
+  }
+  
+  .p-more{
+      width:2rem;
+      margin: auto;
+  }
+  
+  .p-activity-container{
+      background-color: #fdce8d;
+  }
+  
+  .p-profile-activity{
+      display: flex;
+      flex-flow: row;
+      justify-content: space-around;
+  
+      background-color: #194789;
+      color: white;
+  
+      border-bottom: solid;
+      border-color: #fdce8d;
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      margin:0;
+  }
+  
+  .p-profile-activity div{
+      justify-content: center;
+      text-align: center;
+      padding-bottom: 2rem;
+  }
+  
+  /* styling main */
+  .p-main{
+      padding-bottom: 40%;
+      background-image: linear-gradient(white, white, #fdce8d);
+
+  }
+  
+  /*Friends list styling*/
+  .p-friends{
+      position: relative;
+      color: #194789;
+      font-weight: bold;
+      background-image: linear-gradient(#fdce8d , white);
+  }
+  
+  .p-friends-list{
+      display: flex;
+      flex-flow: row;
+      
+  
+  }
+  
+  .p-friends-list div{
+      display: flex;
+      flex-flow: column nowrap;
+      margin: 0.5rem;
+      
+  }
+  
+  .p-friends-list img{
+      height: 4rem;
+      width:  4rem;
+      border-radius: 6rem;
+     
+      max-width: unset;
+  
+      border-color: #194789   ;
+      border-style: solid;
+      border-width: 0.2rem;
+  }
+  
+  .p-friends-list{
+      overflow-x: auto;
+      width: calc(100% - 3rem);
+  }
+  
+  .p-friend-username {
+      text-align: center;
+  }
+  
+  .right
+  {
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      right: 0.6rem;
+      top: 2rem;
+      margin:2rem 0;
+  }
+  
+  
+  /*Styling posts*/
+  
+  
+  .p-post-heading{
+      /* color:#092346; */
+      padding-left: .5rem;
+  }
+  .p-post-container{
+      display: flex;
+      flex-flow: row wrap; 
+      width: inherit;
+      /* margin-bottom: 5rem; */
+      
+  }
+  
+  .p-post-container img{
+     width: calc(100%/3 - 0.3rem); 
+     padding: 0.1rem;
+     
+  }
+
+  .p-clickedpost-container{
+    display: block;
+    position: fixed;
+    top: 0;
+  }
+
+
+  .p-two-logo{
+    width: 5rem;
+    margin: 1rem;
+    position: absolute;
+    top: 0;
+  }
+  /* styling for clicking on post */
+  .p-post-active{
+    width: 100vh;
+    height: 90vh;
+    /* position: fixed;
+    top: 0; */
+    
+  }
+
+  .p-results{
+    width: 24rem;
+    height: 15rem;
+    background-color: #b6c6da;
+    margin: auto;
+    color: #120b01;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    /* height: 5rem; */
+    position: fixed;
+    bottom: 6rem;
+    border-radius: 2rem;
+    text-align: center;
+  }
+
+  .p-results-heading{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: solid;
+    
+  }
+
+  .p-results-value{
+    display: flex;
+  }
+
+  .p-results-value div{
+    margin: auto;
+  }
+
+  
+
+ 
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

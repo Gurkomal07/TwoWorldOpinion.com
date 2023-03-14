@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Profile</title>
+
+	<link rel="stylesheet" href="css/modern-reset.css">
+	<link rel="stylesheet" type="text/css" href="css/stylessettings.css">
+	<link rel="stylesheet" href="css/stylesdiscover.css">
+	
+
+</head>
+<body class="s-body">
+
+    <header class="s-header">
+        <!-- adding image at top -->
+        <div class="s-top-img">
+            <img src="./img/background-login.jpg" alt="top image" title="top image">
+        </div>
+
+        <!-- profile image -->
+        <div class="s-profile">
+            <img class="s-profile-photo" src="../img/background-login.jpg" alt="profile img" title="profile photo">
+        </div>
+    </header>
+
+    <main class="s-main">
+
+        <form action="#" method="post" class="s-form">
+
+            <div class="s-edit-profile">
+                <div>
+                    
+                    <label for="username" name="username" id="username">Username</label>
+                    <input class="s-username" type="text" for="username" placeholder=" Username" name="username" id="username"required>
+                </div>
+                
+                <div class="s-fullname">
+                    <label for="fullName" name="fullName" id="fullName">Full Name</label>
+                    <input class="s-fullName" type="text" for="fullName" placeholder=" FullName" name="fullName" id="fullName"required>
+                </div>
+                
+                <div>
+                    <label for="Age" name="Age" id="Age">Age</label>
+                    <input class="s-Age" type="number" placeholder=" Age" name="age" id="age">
+                </div>
+                <div>
+                    <label for="City" name="City" id="City">City</label>
+
+                    <input class="City" type="text" placeholder=" City" name="City" id="City">
+                </div>
+                <div>
+                    <label for="postalCode" name="postalCode" id="postalCode">Postal Code</label>
+
+                    <input class="postalCode" type="text" placeholder=" Postal-Code" name="postalCode" id="postalCode">
+                </div>
+                <div>
+                    <label for="gender" name="gender" id="gender">Gender</label>
+                    
+                    <select name="gender" id="gender" class="r-dropdown">
+                        <option value="">Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="Not-Defined">Not-Defined</option>
+                        <option value="other">Other</option>
+                    </select>
+    
+    
+                </div>
+            </div>
+
+            <div class="s-form-submit">
+                <button type="submit"><img src="./img/svg/SVG icon/Asset 75.svg"></button>
+            </div>
+
+
+            
+    
+            
+        </form>
+
+        <div class="s-delete-profile">
+            <button class="s-delete-button" type="submit" href="#">Delete Account</button>
+        </div>
+
+        <div class="s-logout"> 
+            <button class="s-logout-button" type="submit" href="#">Logout</button>
+        </div>
+    </main>
+
+
+
+
+    <!-- navigation bar to the other pages at the bottom -->
+<footer>
+	<nav class="d-page-menu">
+		<ul class="d-page-list">
+		<li class="d-page-item">
+			<a href="create/camera.html" class="d-page-link">
+				<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.46 44.2"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;}.cls-1,.cls-2{stroke-miterlimit:10;stroke-width:3px;}.cls-3{fill:#fdce8d;}.cls-4{fill:#194789;}.cls-2{fill:#f7961d;stroke:#194789;}</style></defs><g id="Layer_1-2"><g><circle class="cls-2" cx="18.23" cy="18.23" r="16.73"/><circle class="cls-3" cx="18.23" cy="18.23" r="10.37"/><line class="cls-1" x1="13.31" y1="18.23" x2="23.15" y2="18.23"/><line class="cls-1" x1="18.16" y1="13.1" x2="18.3" y2="23.36"/><rect class="cls-4" x="13.18" y="37.99" width="10.1" height="2.47" rx="1.24" ry="1.24"/><rect class="cls-4" x="14.63" y="41.79" width="7.19" height="2.41" rx="1.2" ry="1.2"/></g></g></svg></a>
+		</li>
+
+		<li class="d-page-item">
+			<a href="discover.html" class="d-page-link">
+			<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.67 28.64"><defs><style>.cls-1{fill:#f7961d;}.cls-2{fill:#fff;}.cls-3{fill:#ffe5c5;}.cls-4{fill:#194789;}</style></defs><g id="Layer_1-2"><g><ellipse class="cls-4" cx="14.84" cy="14.32" rx="14.84" ry="14.32"/><ellipse class="cls-2" cx="14.84" cy="14.32" rx="12.43" ry="12"/><ellipse class="cls-1" cx="14.84" cy="14.32" rx="10.32" ry="9.96"/><circle class="cls-3" cx="19.65" cy="10.88" r="2.68"/></g></g></svg>
+			</a>
+		</li>
+
+		<li class="d-page-item">
+			<a href="profile.html" class="d-page-link">
+				<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.29 37.56"><defs><style>.cls-1{fill:#f7961d;}.cls-2{fill:#194789;}</style></defs><g id="Layer_1-2"><g><path class="cls-2" d="m31.51,11.98L20.64,1.6c-2.23-2.13-5.75-2.13-7.99,0L1.79,11.98c-1.14,1.09-1.79,2.6-1.79,4.18v15.62c0,3.19,2.59,5.78,5.78,5.78h21.73c3.19,0,5.78-2.59,5.78-5.78v-15.62c0-1.58-.65-3.09-1.79-4.18Zm-14.75,20.06c-2.24,0-4.26-.88-5.76-2.31.02.05.03.11.05.16-1.18-1.11-2.03-2.56-2.39-4.19-.16-.65-.26-1.32-.26-2.02,0-4.62,3.74-8.36,8.36-8.36s8.36,3.74,8.36,8.36-3.74,8.36-8.36,8.36Z"/><circle class="cls-1" cx="16.65" cy="24.03" r="4.07"/><rect class="cls-1" x="8.98" y="29.32" width="15.34" height="8.21" rx="3.94" ry="3.94"/></g></g></svg>
+			</a>
+		</li>
+		</ul>
+	</nav>
+</footer>
+
+
+<!-- adding script to the file -->
+<script src="settings.bundle.js"></script>
+<script src="commons.bundle.js"></script>
+
+</body>
+</html>

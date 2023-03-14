@@ -1,0 +1,328 @@
+
+
+
+
+/* Gurkomal Singh 
+Discover page css */
+
+/* .d-body {
+  position: absolute;
+} */
+
+/* background imgage 
+it is a post image covering the whole screen*/
+
+.d-main {
+  padding: 0;
+  /* background-color: #ebeff1; */
+  margin: auto;
+  bottom: 0;
+  background-color: rgb(255, 255, 255);
+
+}
+
+.d-display-on-post {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  top: -2.3rem;
+  overflow: auto;
+}
+
+
+.d-li-img li {
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  /* height: calc(100vh - 9.7rem); */
+  height: calc(97vh - 4.7rem) ;
+  width: 100vw;
+  /* background-color: rgb(213, 49, 49); */
+  margin-left: -2.5rem;
+  /* 59 */
+margin-bottom: -69%;
+}
+
+.d-li-img li img {
+width: 100%;
+height: 87%;
+}
+
+
+
+                            /* Split screen vertically */
+
+
+                            /* .d-post1{
+                              background: url('../img/wallpaperflare.com_wallpaper5.jpg');
+                              background-position: center center;
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              height: 100vh;
+                              width: 50vw;
+                              float: left;
+                            }
+
+                            .d-post2{
+                              background: url('../img/wallpaperflare.com_wallpaper\ \(4\).jpg');
+                              background-position: center center;
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              height: 100vh;
+                              width: 50vw;
+                              float: right;
+                            } */
+
+
+                            /* Split screen horizontally */
+
+                              /* .d-post1{
+                              background: url('../img/wallpaperflare.com_wallpaper5.jpg');
+                              background-position: center center;
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              height: 45vh;
+                              width: 100vw;
+                              float: top;
+                            }
+
+                            .d-post2{
+                              background: url('../img/wallpaperflare.com_wallpaper\ \(4\).jpg');
+                              background-position: center center;
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              height: 45vh;
+                              width: 100vw;
+                              float: bottom;
+                            } */
+
+.d-header {
+  /* background-image: linear-gradient(#163764,rgba(255, 255, 255, 0)); */
+  background-color: #ebeff1;
+  height: 4.7rem;
+  width: 100%;
+  position: fixed;
+  top: 0rem;
+  /* border-radius: 0 0 .3rem .3rem; */
+  z-index: 1;
+}
+
+.d-header svg {
+    width: 4rem;
+    margin-top: .3rem;
+    margin-left: 2rem;
+    position: fixed;
+}
+
+/* navigation bar to the other pages at the bottom */
+
+.d-page-menu {
+    /* border-radius: 1rem 1rem 0 0; */
+    background-color: #ebeff1;
+}
+
+.d-footer {
+  /* position: absolute; */
+}
+
+footer nav {
+    position: fixed;
+    bottom: -.1rem;
+    width: 100%;
+    margin: 0;
+}
+
+/* ul */
+.d-page-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;  
+    padding: 0;
+    align-items: center;
+    padding-top: .8rem;
+    height: 2.3rem;
+}
+  
+/* li */
+  .d-page-item {
+    width: 100%;
+  }
+  
+  /* a */
+  .d-page-link {
+    display: block;
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color .2s;
+  }
+
+  
+
+  /* share, delete, like and dislike button on the post*/
+
+/* div */
+
+.d-reaction-post {
+  /* position: relative; */
+  width: 100vw;
+}
+
+
+  .d-reaction-icons {
+    position: relative;
+    height: 3rem;
+    padding: 0;
+    margin-bottom: 4.1rem;
+  }
+
+
+  /* ul */
+  .d-reaction-list{
+    padding-top: .5rem;
+    display: flex;
+    position: absolute;
+    bottom: -9.9rem;
+    height: 4rem;
+    left: -1.7rem;
+  }
+
+/* li */
+ .d-reaction-list li button{
+    color: #05032d;
+    font-size: 2.2rem;
+    background: none;
+    border: none;
+    width: calc(100vw / 4.26 );
+ }
+
+ .d-reaction-list .d-svg-like button,
+ .d-reaction-list .d-svg-dislike button,
+  .d-reaction-list .d-svg-share {
+  /* padding-right: 1rem; */
+    font-size: 2.5rem;
+    margin-top: -.2rem;
+ }
+
+
+
+
+ footer nav svg {
+    width: 30%;
+    height: 30%;
+    align-items: center;
+ }
+
+
+/* info of the user posted  */
+
+/* div ul*/
+.d-userPosted ul{
+  display: flex;
+  align-items: center;
+  padding-top: .5rem;
+  padding-left: .4rem;
+  
+}
+
+.d-userPosted {
+  position: relative;
+  top: 6rem;
+  width: 100%;
+}
+
+.d-userPosted button {
+  background: none;
+  border: none;
+  color: #ffffff;
+
+}
+
+/* img */
+.d-userPosted img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 2px solid #141212;
+  /* make it glow */
+  box-shadow: 0 0 10px #161515;
+}
+
+.d-userPosted ul li p {
+  font-size: 1.1rem;
+  font-family: 'Sono', sans-serif;
+  letter-spacing: -.5px;
+  text-shadow: 1px 1px 10px #161515;
+
+}
+
+
+.d-search {
+  margin-top: 1rem;
+  margin-left: 10rem;
+  }
+
+  .d-search input {
+    height: 3rem;
+    padding: .5rem;
+    border: 1px solid #05032d;
+    border-radius: .3rem;
+    font-family: 'Sono', sans-serif;
+    width: 10rem;
+  }
+
+  .d-search button {
+    height: 3rem;
+    padding: .5rem;
+    border: 1px solid #05032d;
+    border-radius: .3rem;
+    color: #e5760e;
+    background-color: #ffffff;
+
+  }
+
+  #search-results {
+    position: absolute;
+    top: 3rem;
+    margin-left: 10rem;
+    left: 0;
+    z-index: 999;
+    width: 10rem;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #070707;
+    border-radius: 0 0 .3rem .3rem;
+    border-top: none;
+  }
+  
+  #search-results li {
+    padding: 10px;
+    cursor: pointer;
+    margin-left: -2.5rem;
+    font-family: 'Sono', sans-serif;
+    color: #05032d;
+  }
+  
+  #search-results li:hover {
+    background-color: #868482;
+  }
+  
+  #search-results li:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* scrollbar height */
+  #search-results::-webkit-scrollbar {
+    width: .3rem;
+    height: 2px;
+  }
+
+  /* scrollbar color */
+  #search-results::-webkit-scrollbar-thumb {
+    background-color: #e5760e;
+    border-radius: 1rem;
+
+  }
+  

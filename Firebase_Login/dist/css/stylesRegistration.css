@@ -1,0 +1,95 @@
+body{
+  background-image: url(../img/background-login.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* opacity: 1; */
+}
+
+.r-background {
+  margin: 2rem;
+  margin-top: 5rem;
+  border-radius: 10px ;
+  padding-bottom: 2rem;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 98%, .7);
+}
+
+ svg{
+  margin-top: 1rem;
+  margin-left: 0rem;
+  width: 2rem;
+}
+
+.r-container{
+    max-width: 100%;
+}
+.r-container div,form{
+    max-width: 100%;
+  text-align: center;
+
+}
+
+.r-container h1{
+    text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+}
+.r-reg input{
+        width: 50%;
+    height: 3rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.r-dropdown{
+  width: 53.5%;
+  height: 3.5rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+
+}
+
+
+
+.r-reg button{
+     width: 40%;
+   font-size: 1rem;
+   padding: 0.5rem;
+   /* padding: 0.5rem 5rem 0.5rem 5rem; */
+    border-radius: 1rem;
+    text-align: center;
+    background-color: #194789;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.r-reg button a{
+    text-decoration: none;
+  color: #fdce8d;
+  
+}
+.r-reg h2{
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.r-reg h2 a{
+    text-decoration: none;
+  color: #f7961d;
+}
+
+@media screen and (min-width:45rem) {
+  body{
+    min-width: 30rem;
+    max-width: 40rem;
+    margin: auto;
+  }
+}

@@ -1,0 +1,164 @@
+a:hover {
+    letter-spacing: 2px;
+}
+
+.c-cancel svg {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.c-cancel {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.c-cancel h1 {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    font-size: 3rem;
+}
+
+.c-gallery {
+    position: relative;
+    height: 100vh;
+    position: fixed;
+}
+
+.c-function {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.c-function {
+    position: absolute;
+    right: 0.1rem;
+}
+
+.c-done {
+    position: absolute;
+    right: 0.1rem;
+    bottom: 1rem;
+}
+
+.c-function img {
+    fill: #fff;
+    width: 4rem;
+    height: 4rem;
+}
+
+
+.c-done img{
+    border: none;
+    border-radius: 0%;
+    width: 4rem;
+    height: 4rem;
+}
+
+.c-done {
+    margin-top: 25rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+
+.c-gallery {
+    width: 100%;
+    height: 92vh;
+}
+
+
+.c-post-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.c-post-template {
+    width: calc(100%/3 - 0.1rem);
+    padding: 0.2rem;
+}
+
+.c-post-template img {
+    height: 15rem;
+    width: fit-content;
+}
+
+.c-split {
+    height: 80vh;
+}
+
+.c-capture ul {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.c-capture {
+    position: fixed;
+    bottom: 4.5rem;
+    height: 8rem;
+    width: 100%;
+}
+
+.c-capture svg {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.c-cameraclick {
+    padding-left: 4.5rem;
+}
+
+
+/* .c-image-display {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100vh;
+}   */
+
+ .c-image-display-split {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100vh;
+}
+
+.c-image-display img{
+    height: 100vh;
+}
+
+.text-container{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    margin-top: 35vh;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.c-submit{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+ 
+
+
+.c-text, .c-done, .c-splitscreen, .c-accessgallery{
+    width: fit-content;
+    padding: 0;
+    margin: 0.5rem;
+    border-style: none;
+    border-radius: 3rem;
+
+}
+
+
