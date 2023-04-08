@@ -1,0 +1,188 @@
+/* Gurkomal Singh 
+Discover page css */
+
+
+
+/* background imgage 
+it is a post image covering the whole screen*/
+
+ .d-main{
+    background: url('../img/wallpaperflare.com_wallpaper5.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+} 
+
+
+                            /* Split screen vertically */
+
+
+                            /* .d-post1{
+                              background: url('../img/wallpaperflare.com_wallpaper5.jpg');
+                              background-position: center center;
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              height: 100vh;
+                              width: 50vw;
+                              float: left;
+                            }
+
+                            .d-post2{
+                              background: url('../img/wallpaperflare.com_wallpaper\ \(4\).jpg');
+                              background-position: center center;
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              height: 100vh;
+                              width: 50vw;
+                              float: right;
+                            } */
+
+
+                            /* Split screen horizontally */
+
+                              /* .d-post1{
+                              background: url('../img/wallpaperflare.com_wallpaper5.jpg');
+                              background-position: center center;
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              height: 45vh;
+                              width: 100vw;
+                              float: top;
+                            }
+
+                            .d-post2{
+                              background: url('../img/wallpaperflare.com_wallpaper\ \(4\).jpg');
+                              background-position: center center;
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              height: 45vh;
+                              width: 100vw;
+                              float: bottom;
+                            } */
+
+
+.d-header svg {
+    width: 18%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    position: fixed;
+}
+
+/* navigation bar to the other pages at the bottom */
+
+.d-page-menu {
+    border-radius: 1rem 1rem 0 0;
+    background-color: #ebeff1;
+}
+
+footer nav {
+    position: fixed;
+    bottom: -1rem;
+    width: 100%;
+    margin: 0;
+}
+
+/* ul */
+.d-page-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;  
+    padding: 0;
+    align-items: center;
+    padding-top: .6rem
+}
+  
+/* li */
+  .d-page-item {
+    width: 100%;
+  }
+  
+  /* a */
+  .d-page-link {
+    display: block;
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color .2s;
+  }
+
+  
+
+  /* share, delete, like and dislike button on the post*/
+
+/* div */
+  .d-reaction-icons {
+    position: fixed;
+    bottom: 10rem;
+    right: .3rem;
+    z-index: 1;
+  }
+
+
+  /* ul */
+  .d-reaction-list {
+    max-width: 5rem;
+    background-color: hsl(200, 18%, 93%, .6);
+    border: 0 sloid white;
+    border-radius: 4rem;
+    padding: 1rem 0;
+    margin-left: .5rem;
+ }
+
+/* li */
+ .d-reaction-list li {
+    color: #052655;
+    font-size: 2.2rem;
+    margin: .5rem .7rem;
+ }
+
+ .d-reaction-list .d-svg-like,
+ .d-reaction-list .d-svg-dislike {
+    font-size: 2.5rem;
+ }
+
+ footer nav svg {
+    width: 30%;
+    height: 30%;
+    align-items: center;
+ }
+
+
+/* info of the user posted  */
+
+/* div ul*/
+.d-userPosted ul {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: #ebeff1;
+}
+
+.d-userPosted {
+  position: fixed;
+  bottom: 4.5rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), #1a3253);  
+  height: 8rem;
+  width: 100%;
+}
+
+/* img */
+.d-userPosted img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.d-userPosted ul li p {
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+
+
+
+
+
+  

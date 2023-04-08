@@ -1,0 +1,561 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TwoWorldProject.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TwoWorldProject.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\css\\stylesRegistration.css",
+      "PackagePath": "staticwebassets\\css\\stylesRegistration.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\css\\stylesdiscover.css",
+      "PackagePath": "staticwebassets\\css\\stylesdiscover.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\css\\styleslogin.css",
+      "PackagePath": "staticwebassets\\css\\styleslogin.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\.DS_Store",
+      "PackagePath": "staticwebassets\\img\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\background-login.jpg",
+      "PackagePath": "staticwebassets\\img\\background-login.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\c-background-img1.jpg",
+      "PackagePath": "staticwebassets\\img\\c-background-img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\c-background-img2.jpg",
+      "PackagePath": "staticwebassets\\img\\c-background-img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\c-gallery-img.jpg",
+      "PackagePath": "staticwebassets\\img\\c-gallery-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\c-gallery-img2.jpg",
+      "PackagePath": "staticwebassets\\img\\c-gallery-img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\c-gallery-img3.jpg",
+      "PackagePath": "staticwebassets\\img\\c-gallery-img3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\c-gallery-img4.jpg",
+      "PackagePath": "staticwebassets\\img\\c-gallery-img4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\c-gallery-img5.jpg",
+      "PackagePath": "staticwebassets\\img\\c-gallery-img5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\c-gallery-img6.jpg",
+      "PackagePath": "staticwebassets\\img\\c-gallery-img6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\c-gallery-img7.jpg",
+      "PackagePath": "staticwebassets\\img\\c-gallery-img7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\c-gallery-img8.jpg",
+      "PackagePath": "staticwebassets\\img\\c-gallery-img8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\c-gallery-img9.jpg",
+      "PackagePath": "staticwebassets\\img\\c-gallery-img9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\reshot-icon-add-account-UGH59DR34J.svg",
+      "PackagePath": "staticwebassets\\img\\reshot-icon-add-account-UGH59DR34J.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\reshot-icon-arrow-right-ZP2WDL9B8N.svg",
+      "PackagePath": "staticwebassets\\img\\reshot-icon-arrow-right-ZP2WDL9B8N.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 59.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 59.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 60.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 60.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 61.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 61.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 62.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 62.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 64.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 64.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 65.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 65.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 66.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 66.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 67.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 67.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 68.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 68.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 69.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 69.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 70.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 70.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 71.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 71.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 72.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 72.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 73.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 73.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 74.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 74.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 75.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 75.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 76.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 76.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 77.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 77.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 79.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 79.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 80.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 80.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 81.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 81.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 82.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 82.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 83.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 83.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 84.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 84.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 85.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 85.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 86.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 86.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 87.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 87.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 88.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 88.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 89.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 89.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 90.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 90.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 91.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 91.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 92.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 92.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 93.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 93.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 94.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 94.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 95.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 95.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 96.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 96.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Asset 97.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Asset 97.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\Group 43.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\Group 43.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\c-camera.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\c-camera.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\c-cancel.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\c-cancel.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\c-done.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\c-done.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\c-gallery.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\c-gallery.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\c-rotate.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\c-rotate.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\c-split.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\c-split.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\c-text.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\c-text.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\svg\\SVG icon\\x-circle.svg",
+      "PackagePath": "staticwebassets\\img\\svg\\SVG icon\\x-circle.svg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\wallpaperflare.com_wallpaper (10).jpg",
+      "PackagePath": "staticwebassets\\img\\wallpaperflare.com_wallpaper (10).jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\wallpaperflare.com_wallpaper (11).jpg",
+      "PackagePath": "staticwebassets\\img\\wallpaperflare.com_wallpaper (11).jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\wallpaperflare.com_wallpaper (12).jpg",
+      "PackagePath": "staticwebassets\\img\\wallpaperflare.com_wallpaper (12).jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\wallpaperflare.com_wallpaper (2).jpg",
+      "PackagePath": "staticwebassets\\img\\wallpaperflare.com_wallpaper (2).jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\wallpaperflare.com_wallpaper (3).jpg",
+      "PackagePath": "staticwebassets\\img\\wallpaperflare.com_wallpaper (3).jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\wallpaperflare.com_wallpaper (4).jpg",
+      "PackagePath": "staticwebassets\\img\\wallpaperflare.com_wallpaper (4).jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\wallpaperflare.com_wallpaper (6).jpg",
+      "PackagePath": "staticwebassets\\img\\wallpaperflare.com_wallpaper (6).jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\wallpaperflare.com_wallpaper (8).jpg",
+      "PackagePath": "staticwebassets\\img\\wallpaperflare.com_wallpaper (8).jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\wallpaperflare.com_wallpaper (9).jpg",
+      "PackagePath": "staticwebassets\\img\\wallpaperflare.com_wallpaper (9).jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\img\\wallpaperflare.com_wallpaper5.jpg",
+      "PackagePath": "staticwebassets\\img\\wallpaperflare.com_wallpaper5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\gurko\\Desktop\\TwoWorldProject\\TwoWorldProject\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.TwoWorldProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.TwoWorldProject.props",
+      "PackagePath": "build\\TwoWorldProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.TwoWorldProject.props",
+      "PackagePath": "buildMultiTargeting\\TwoWorldProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.TwoWorldProject.props",
+      "PackagePath": "buildTransitive\\TwoWorldProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
